@@ -17,7 +17,6 @@ env:
   MANIFEST: git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git
   MANIFEST_BRANCH: twrp-10.0-deprecated
   EXTRA_SYNC_CMD: echo "hello world"
-  DEVICE: Infinix-X657B
   DT_LINK: https://github.com/SmallPP420/Infix-X657B-TWRP
   DT_PATH: device/infix/Infinix-X657B
   DT_BRANCH: main
@@ -59,7 +58,7 @@ jobs:
        - name: Build
          run: |
               cd work
-              . build/envsetup.sh && lunch omni_$DEVICE-eng && export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
+              . build/envsetup.sh && lunch omni_Infinix-X657B-eng && export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
              
        - uses: actions/upload-artifact@v2
          with:
